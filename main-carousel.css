@@ -1,0 +1,123 @@
+
+.direction{
+    text-align: center;
+}
+.direction button{
+    font-family: cursive;
+    font-weight: bold;
+    background-color: #ffffff44;
+    border:none;
+    width:50px;
+    height:50px;
+    border-radius: 50%;
+    transition: 0.5s;
+    margin:0 10px;
+}
+.direction button:hover{
+    background-color: #ffffff;
+}
+
+.item{
+    width:240px;
+    height:100%;
+    border: 1px solid  #ebebeb;
+    overflow: hidden;
+    transition: 0.5s;
+    margin: 10px;
+    scroll-snap-align: start;
+    position: relative;
+}
+
+
+.item .avatar{
+    display: block;
+    margin: 12px;
+    width: 90%;
+    height: auto;
+    position: relative;
+    object-fit: contain;
+    /* top: -55px; */
+
+}
+.item .content{
+    font-weight: 100;
+    line-height: 1;
+    text-align:center;
+}
+
+.heart {
+    border-radius: 30px;
+    width: 40px;
+    position: absolute;
+    right:5%;
+    top: 20px;
+    margin: 0px 5px 0px 0px;
+    background-color: white;
+    z-index: 1;
+    padding: 10px;
+}
+.item .content span{
+    padding:10px 0;
+    display: flex;
+    width: 100%;
+    font-size: 16px;
+    font-weight: lighter;
+    justify-content: center;
+}
+.item .content p{
+    font-size: 16px;
+}
+
+
+.item .nameGroup{
+    text-align: center;
+    border-bottom:none!important;
+}
+#list{
+    display: flex;
+    width:max-content;
+}
+#formList{
+    width:1280px;
+    max-width: 100%;
+    overflow: auto;
+    margin:100px auto 50px;
+    scroll-behavior: smooth;
+    scroll-snap-type: both;
+}
+#formList::-webkit-scrollbar{
+    display: none;
+}
+@media screen and (max-width: 1024px){
+    .item{
+        width: calc(33.3vw - 20px);
+    }
+    .direction{
+        display: none;
+    }
+    .heart {
+        border-radius: 30px;
+        width: 40px;
+        position: absolute;
+        right:5%;
+        top: 20px;
+        margin: 0px 5px 0px 0px;
+        background-color: white;
+        z-index: 1;
+        padding: 10px;
+    }
+    .item .avatar {
+        margin: 15px !important;
+        width: 90%;
+    }
+}
+@media screen and (max-width: 768px){
+    .item{
+        width: calc(50vw - 20px);
+    }
+    .direction{
+        display: none;
+    }
+  
+}
+  
