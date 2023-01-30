@@ -12,21 +12,60 @@
 </head>
 
 <body>
-    <div class="container grid-container">
+    <div class="container grid-container" >
         <div class="row">
-                <div class="product grid-item">
-                    <div class="product-small-img">
+                <div class="product grid-item" >
+                    <div class="product-small-img" >
                         <img id="myDivs" class="aaa" src="img-1.jpeg" onclick="myFunction(this)"> 
                         <img id="myDivs" src="img-2.jpeg" onclick="myFunction(this)"> 
                         <img id="myDivs" src="img-3.jpeg" onclick="myFunction(this)"> 
                         <img id="myDivs" src="img-4.jpeg" onclick="myFunction(this)"> 
                         <img id="myDivs" src="img-5.jpeg" onclick="myFunction(this)"> 
                     </div>
-                    <div class="img-container">
-                        <img class="active-img" id="imageBox" src="img-1.jpeg">
-                    </div>
+                    <div class="img-container" value="Lock" onclick="noflow()" >
+                        <img active-img id="imageBox" src="img-1.jpeg" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
+                    </div> 
+                    <div id="myModal" class="modal">
+                        <div value="Unlock" onclick="haveflow()"  class="close-btn">
+                            <span  class="close cursor" onclick="closeModal()">&times;</span>
 
+                        </div>
+                        <div class="modal-content">
+                      
+                          <div class="mySlides">
+                            <div class="numbertext">1 / 4</div>
+                            <img src="https://atagiev01.github.io/ex/img-1.jpeg" style="width:100%">
+                          </div>
+                      
+                          <div class="mySlides">
+                            <div class="numbertext">2 / 4</div>
+                            <img src="img-2.jpeg" style="width:100%">
+                          </div>
+                      
+                          <div class="mySlides">
+                            <div class="numbertext">3 / 4</div>
+                            <img src="img-3.jpeg" style="width:100%">
+                          </div>
+                          
+                          <div class="mySlides">
+                            <div class="numbertext">4 / 4</div>
+                            <img src="img-4.jpeg" style="width:100%">
+                          </div>
+                          
+                          
+                          
+                          
+                          <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                          <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                      
+                          <div class="caption-container">
+                            <p id="caption"></p>
+                          </div>
+                      </div>
+                      </div>
                 </div>
+
+
                 <div class="information grid-item">
                     <div class="title-head">
                         <h1 style="margin: 0;">DÜŞÜK OMUZ KORSE BEL YIRTMAÇLU UZUN ELBİSE</h1>
@@ -78,34 +117,6 @@
                                             alt="">
                                         <span>Paylaş</span>
                                     </a>
-                                    <!-- <div class="product-social-content openbox-content">
-                                        <div>
-                                            <div>
-                                                <a href="#" class="product-social-facebook" data-selector="share-link"
-                                                    data-type="facebook">
-                                                    <i class="fab fa-facebook-f"></i>
-                                                </a>
-                                            </div>
-                                            <div>
-                                                <a href="#" class="product-social-twitter" data-selector="share-link"
-                                                    data-type="twitter">
-                                                    <i class="fab fa-twitter"></i>
-                                                </a>
-                                            </div>
-                                            <div>
-                                                <a href="#" class="product-social-pinterest" data-selector="share-link"
-                                                    data-type="pinterest">
-                                                    <i class="fab fa-pinterest-p"></i>
-                                                </a>
-                                            </div>
-                                            <div>
-                                                <a href="#" class="product-social-whatsapp" data-selector="share-link"
-                                                    data-type="whatsapp">
-                                                    <i class="fab fa-whatsapp"></i>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div> -->
                                 </div>
                                 <div class="img-icon">
                                     <a href="#" >
@@ -213,6 +224,22 @@
     <script src="./main.js">
       
     </script>
+
+
+<script>
+    // (A) DISABLE SCROLL
+    function noflow () {
+      document.body.style.overflow = "hidden";
+      document.body.style.userSelect = "none";
+    }
+    
+    // (B) ENABLE SCROLL
+    function haveflow () {
+      document.body.style.overflow = "auto";
+      document.body.style.userSelect = "auto";
+    }
+    </script>
+
 </body>
 
 </html>
